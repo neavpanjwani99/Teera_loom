@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "tertiary": "#805200", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#feb956", "tertiary-container": "#a06901", "on-secondary-container": "#445a7f", "outline-variant": "#dec0b7", "on-surface": "#1c1c19", "inverse-primary": "#ffb59c", "surface-container": "#f0ede9", "surface-container-low": "#f6f3ee", "on-tertiary": "#ffffff", "on-background": "#1c1c19", "on-secondary-fixed-variant": "#30476a", "inverse-surface": "#31302d", "on-error": "#ffffff", "inverse-on-surface": "#f3f0eb", "outline": "#8a726a", "secondary-container": "#bbd3fd", "primary": "#9f3c16", "surface-container-highest": "#e5e2dd", "surface-container-high": "#ebe8e3", "background": "#fcf9f4", "error-container": "#ffdad6", "on-tertiary-container": "#fffbff", "on-primary-container": "#fffbff", "error": "#ba1a1a", "secondary-fixed": "#d5e3ff", "surface-tint": "#a23e18", "primary-fixed-dim": "#ffb59c", "primary-fixed": "#ffdbcf", "on-primary-fixed": "#390c00", "tertiary-fixed": "#ffddb4", "on-secondary-fixed": "#001b3c", "secondary-fixed-dim": "#b0c7f1", "on-tertiary-fixed-variant": "#633f00", "on-surface-variant": "#57423b", "on-primary": "#ffffff", "surface-bright": "#fcf9f4", "surface-variant": "#e5e2dd", "surface-container-lowest": "#ffffff", "primary-container": "#bf542c", "surface": "#fcf9f4", "on-tertiary-fixed": "#291800", "on-primary-fixed-variant": "#822801", "secondary": "#485f84", "surface-dim": "#dcdad5" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-tablet": "2rem", "space-xl": "2.5rem", "gutter-tablet": "1.5rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1rem", "margin": "1rem", "space-sm": "0.5rem" }, fontFamily: { "headline-lg-mobile": ["Noto Sans"], "body-md": ["Noto Sans"], "headline-xl": ["Noto Sans"], "label-lg": ["Noto Sans"], "body-lg": ["Noto Sans"], "label-md": ["Noto Sans"], "body-sm": ["Noto Sans"], "headline-md": ["Noto Sans"], "headline-xl-mobile": ["Noto Sans"], "label-sm": ["Noto Sans"], "headline-lg": ["Noto Sans"] }, fontSize: { "headline-lg-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "fontWeight": "700" }], "label-lg": ["16px", { "lineHeight": "24px", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }], "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "500" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    button, .craft-card {
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col pt-safe pb-safe"><main class="flex flex-col relative w-full bg-surface min-h-screen"><div class="flex flex-col w-full pb-36">
+<!-- Top Brand & Audio Helper Pill -->
+<div class="px-margin pt-space-sm flex items-center justify-between">
+<button aria-label="Back to Language Selection" class="inline-flex items-center gap-1 text-on-surface-variant active:scale-95 transition-transform focus:outline-none cursor-pointer" onclick="handleNavigateBack()">
+<span class="material-symbols-outlined text-headline-md">arrow_back</span>
+<span class="font-label-sm text-label-sm font-semibold">भाषा / Language</span>
+</button>
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wider uppercase">Terra Loom</span>
+</div>
+<div class="px-margin pt-space-sm mb-space-sm">
+<button aria-label="Listen instructions" class="inline-flex items-center gap-space-xs bg-tertiary-fixed text-on-tertiary-fixed px-space-md py-space-xs rounded-full shadow-sm active:scale-95 transition-transform cursor-pointer" id="audio-helper" onclick="playAudioGuide()">
+<span class="material-symbols-outlined text-headline-md animate-pulse" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+<span class="font-label-sm text-label-sm font-medium">अपने काम पर टैप करें / Tap on your craft</span>
+</button>
+</div>
+<!-- Header Section -->
+<div class="px-margin mb-space-md">
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">
+      आप क्या बनाते हैं? <span class="font-body-md text-body-md text-on-surface-variant font-normal">/ What Do You Craft?</span>
+</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+      Select one or more crafts you make. You can add more later.
+    </p>
+</div>
+<!-- Step Progress Indicator -->
+<div class="px-margin mb-space-md">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="h-1.5 rounded-full bg-primary flex-1"></div>
+<div class="h-1.5 rounded-full bg-primary flex-1"></div>
+<div class="h-1.5 rounded-full bg-primary flex-1"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest flex-1"></div>
+<div class="h-1.5 rounded-full bg-surface-container-highest flex-1"></div>
+</div>
+<div class="flex justify-between items-center mt-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-medium">चरण ३/५ • Step 3 of 5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">शिल्प चयन • Craft Selection</span>
+</div>
+</div>
+<!-- 3-Column Tactile Craft Grid -->
+<div class="px-margin">
+<div class="grid grid-cols-3 gap-space-sm" id="craft-grid">
+<!-- 1. Weaving (Active) -->
+<button class="craft-card relative flex flex-col items-center justify-between p-space-xs min-h-[120px] rounded-xl text-center transition-all bg-surface-container-lowest shadow-md ring-2 ring-primary cursor-pointer active:scale-95" data-craft="weaving" type="button">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center check-badge shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="craft-icon-wrap w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center mt-space-xs text-primary shadow-inner">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2C8 2 4 6 2 12c2 6 6 10 10 10s10-4 10-10C20 6 16 2 12 2zm0 3c2.4 0 5 2.5 6.5 7-1.5 4.5-4.1 7-6.5 7s-5-2.5-6.5-7C7 7.5 9.6 5 12 5zm-1 4v6h2V9h-2z"></path>
+</svg>
+</div>
+<div class="w-full mt-space-xs">
+<p class="craft-title font-label-sm text-label-sm text-primary leading-tight line-clamp-1 font-semibold">बुनकरी</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant line-clamp-1">Weaving</p>
+</div>
+</button>
+<!-- 2. Pottery -->
+<button class="craft-card relative flex flex-col items-center justify-between p-space-xs min-h-[120px] rounded-xl text-center transition-all bg-surface-container-low shadow-sm cursor-pointer active:scale-95" data-craft="pottery" type="button">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary-container hidden items-center justify-center check-badge shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="craft-icon-wrap w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mt-space-xs text-on-surface-variant shadow-inner">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 19c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V9c0-1.1.9-2 2-2h1.17C8.6 5.84 9.65 5 10.9 5h2.2c1.25 0 2.3.84 2.73 2H17c1.1 0 2 .9 2 2v10zm-7-12c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm0 4c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"></path>
+</svg>
+</div>
+<div class="w-full mt-space-xs">
+<p class="craft-title font-label-sm text-label-sm text-on-surface leading-tight line-clamp-1">मिट्टी शिल्प</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant line-clamp-1">Pottery</p>
+</div>
+</button>
+<!-- 3. Jewelry (Active) -->
+<button class="craft-card relative flex flex-col items-center justify-between p-space-xs min-h-[120px] rounded-xl text-center transition-all bg-surface-container-lowest shadow-md ring-2 ring-primary cursor-pointer active:scale-95" data-craft="jewelry" type="button">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center check-badge shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="craft-icon-wrap w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center mt-space-xs text-primary shadow-inner">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2L6 8l6 14 6-14-6-6zm0 3.2L15.3 8H8.7L12 5.2zM8.1 9.5h7.8L12 17.6 8.1 9.5z"></path>
+</svg>
+</div>
+<div class="w-full mt-space-xs">
+<p class="craft-title font-label-sm text-label-sm text-primary leading-tight line-clamp-1 font-semibold">गहने / ज़ेवर</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant line-clamp-1">Jewelry</p>
+</div>
+</button>
+<!-- 4. Woodwork -->
+<button class="craft-card relative flex flex-col items-center justify-between p-space-xs min-h-[120px] rounded-xl text-center transition-all bg-surface-container-low shadow-sm cursor-pointer active:scale-95" data-craft="woodwork" type="button">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary-container hidden items-center justify-center check-badge shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="craft-icon-wrap w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mt-space-xs text-on-surface-variant shadow-inner">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM11 17l-4-4 1.41-1.41L11 14.17l5.59-5.59L18 10l-7 7z"></path>
+</svg>
+</div>
+<div class="w-full mt-space-xs">
+<p class="craft-title font-label-sm text-label-sm text-on-surface leading-tight line-clamp-1">लकड़ी काम</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant line-clamp-1">Woodwork</p>
+</div>
+</button>
+<!-- 5. Metalwork -->
+<button class="craft-card relative flex flex-col items-center justify-between p-space-xs min-h-[120px] rounded-xl text-center transition-all bg-surface-container-low shadow-sm cursor-pointer active:scale-95" data-craft="metalwork" type="button">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary-container hidden items-center justify-center check-badge shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="craft-icon-wrap w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mt-space-xs text-on-surface-variant shadow-inner">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"></path>
+</svg>
+</div>
+<div class="w-full mt-space-xs">
+<p class="craft-title font-label-sm text-label-sm text-on-surface leading-tight line-clamp-1">धातु शिल्प</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant line-clamp-1">Metalwork</p>
+</div>
+</button>
+<!-- 6. Painting -->
+<button class="craft-card relative flex flex-col items-center justify-between p-space-xs min-h-[120px] rounded-xl text-center transition-all bg-surface-container-low shadow-sm cursor-pointer active:scale-95" data-craft="painting" type="button">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary-container hidden items-center justify-center check-badge shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="craft-icon-wrap w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mt-space-xs text-on-surface-variant shadow-inner">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.28 19.64 10.59 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-4.5 9c-.83 0-1.5-.67-1.5-1.5S6.67 9 7.5 9s1.5.67 1.5 1.5S8.33 12 7.5 12zm3-4C9.67 8 9 7.33 9 6.5S9.67 5 10.5 5s1.5.67 1.5 1.5S11.33 8 10.5 8zm3 0c-.83 0-1.5-.67-1.5-1.5S12.67 5 13.5 5s1.5.67 1.5 1.5S14.33 8 13.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S15.67 9 16.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path>
+</svg>
+</div>
+<div class="w-full mt-space-xs">
+<p class="craft-title font-label-sm text-label-sm text-on-surface leading-tight line-clamp-1">चित्रकारी</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant line-clamp-1">Painting</p>
+</div>
+</button>
+<!-- 7. Bamboo & Cane -->
+<button class="craft-card relative flex flex-col items-center justify-between p-space-xs min-h-[120px] rounded-xl text-center transition-all bg-surface-container-low shadow-sm cursor-pointer active:scale-95" data-craft="bamboo" type="button">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary-container hidden items-center justify-center check-badge shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="craft-icon-wrap w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mt-space-xs text-on-surface-variant shadow-inner">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"></path>
+</svg>
+</div>
+<div class="w-full mt-space-xs">
+<p class="craft-title font-label-sm text-label-sm text-on-surface leading-tight line-clamp-1">बांस शिल्प</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant line-clamp-1">Bamboo</p>
+</div>
+</button>
+<!-- 8. Leathercraft -->
+<button class="craft-card relative flex flex-col items-center justify-between p-space-xs min-h-[120px] rounded-xl text-center transition-all bg-surface-container-low shadow-sm cursor-pointer active:scale-95" data-craft="leather" type="button">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary-container hidden items-center justify-center check-badge shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="craft-icon-wrap w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mt-space-xs text-on-surface-variant shadow-inner">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19.5 12c0-.23-.01-.45-.03-.68l1.86-1.41c.4-.3.51-.86.26-1.3l-1.87-3.23a.987.987 0 0 0-1.25-.42l-2.15.91c-.37-.26-.76-.49-1.17-.68l-.29-2.31c-.06-.5-.49-.88-.99-.88h-3.73c-.51 0-.94.38-1 .88l-.29 2.31c-.41.19-.8.42-1.17.68l-2.15-.91c-.46-.2-.99-.02-1.25.42L2.41 8.61c-.25.44-.14.99.26 1.3l1.86 1.41a7.35 7.35 0 0 0 0 1.36l-1.86 1.41c-.4.3-.51.86-.26 1.3l1.87 3.23c.26.44.79.62 1.25.42l2.15-.91c.37.26.76.49 1.17.68l.29 2.31c.06.5.49.88.99.88h3.73c.5 0 .93-.38.99-.88l.29-2.31c.41-.19.8-.42 1.17-.68l2.15.91c.46.2.99.02 1.25-.42l1.87-3.23c.25-.44.14-.99-.26-1.3l-1.86-1.41c.03-.23.04-.45.04-.68zm-7.5 3c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
+</svg>
+</div>
+<div class="w-full mt-space-xs">
+<p class="craft-title font-label-sm text-label-sm text-on-surface leading-tight line-clamp-1">चमड़ा काम</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant line-clamp-1">Leather</p>
+</div>
+</button>
+<!-- 9. Others -->
+<button class="craft-card relative flex flex-col items-center justify-between p-space-xs min-h-[120px] rounded-xl text-center transition-all bg-surface-container-low shadow-sm cursor-pointer active:scale-95" data-craft="others" type="button">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-tertiary-container text-on-tertiary-container hidden items-center justify-center check-badge shadow-sm">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<div class="craft-icon-wrap w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mt-space-xs text-on-surface-variant shadow-inner">
+<span class="material-symbols-outlined text-headline-md">auto_awesome</span>
+</div>
+<div class="w-full mt-space-xs">
+<p class="craft-title font-label-sm text-label-sm text-on-surface leading-tight line-clamp-1">अन्य शिल्प</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant line-clamp-1">Other Craft</p>
+</div>
+</button>
+</div>
+</div>
+<!-- Physical GI & Scheme Trust Tag -->
+<div class="px-margin mt-space-md">
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center gap-space-sm shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-headline-md" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface">पीएम विश्वकर्मा एवं जीआई मान्यता समर्थित</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant truncate">Supported by PM Vishwakarma &amp; GI Registry</p>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Bar -->
+<div class="fixed bottom-0 inset-x-0 bg-surface-container-lowest border-t border-outline-variant/30 shadow-2xl px-margin py-3 pb-safe flex flex-col gap-2.5 z-30">
+<!-- Selected Summary Pill & Voice Trigger -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary font-bold" id="craft-count-text">२ शिल्प चुने गए • 2 Crafts Selected</span>
+</div>
+<button class="text-on-surface hover:text-primary active:scale-95 transition-all font-label-sm text-label-sm flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-surface-container border border-outline-variant/40 shadow-xs cursor-pointer focus:outline-none" id="voice-confirm" onclick="handleVoiceSelection()" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">record_voice_over</span>
+<span class="font-medium">बोल कर चुनें</span>
+</button>
+</div>
+<!-- Primary Action Button (Large high-contrast primary CTA button) -->
+<button class="w-full h-14 bg-primary hover:bg-primary-container active:scale-[0.98] text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-space-sm shadow-lg transition-all focus:outline-none cursor-pointer" id="btn-continue-craft" onclick="handleContinueToScreen4()" type="button">
+<span>आगे बढ़ें / Continue</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</div>
+</div>
+<script>
+  function handleNavigateBack() {
+    // Navigation back to Screen 2 (Language & Role Selection)
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'NAVIGATE_TO_SCREEN', screen: 2 }, '*');
+    }
+    alert('स्क्रीन २ पर वापस जा रहे हैं (Navigating back to Screen 2: Language & Role Selection)');
+  }
+
+  function handleVoiceSelection() {
+    const promptMsg = 'कृपया अपने शिल्प का नाम बोलें (उदा. "बुनकरी", "मिट्टी शिल्प") / Please speak your craft name...';
+    const voiceInput = prompt(promptMsg, 'बुनकरी');
+    if (voiceInput) {
+      const inputLower = voiceInput.toLowerCase().trim();
+      const allCards = document.querySelectorAll('.craft-card');
+      let matched = false;
+      allCards.forEach(card => {
+        const craftKey = card.getAttribute('data-craft');
+        const textContent = card.innerText.toLowerCase();
+        if (textContent.includes(inputLower) || craftKey.includes(inputLower)) {
+          card.classList.add('ring-2', 'ring-primary');
+          matched = true;
+        }
+      });
+      if (matched && window.updateSelectionState) {
+        window.updateSelectionState();
+      }
+      alert(`आवाज पहचानी गई: "${voiceInput}"। आगे स्क्रीन ४ पर जा रहे हैं (Proceeding to Screen 4: Mobile Login & OTP)`);
+      handleContinueToScreen4();
+    }
+  }
+
+  function handleContinueToScreen4() {
+    const selectedCards = document.querySelectorAll('.craft-card.ring-2');
+    if (selectedCards.length === 0) {
+      alert('कृपया आगे बढ़ने से पहले कम से कम एक शिल्प चुनें (Please select at least one craft before continuing)');
+      return;
+    }
+    const selectedCrafts = Array.from(selectedCards).map(c => c.getAttribute('data-craft'));
+    
+    // Smooth visual feedback on button
+    const btn = document.getElementById('btn-continue-craft');
+    if (btn) {
+      btn.style.opacity = '0.85';
+      btn.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        btn.style.opacity = '1';
+        btn.style.transform = 'scale(1)';
+      }, 150);
+    }
+
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'NAVIGATE_TO_SCREEN', screen: 4, data: { crafts: selectedCrafts } }, '*');
+    }
+    alert(`शिल्प चयनित: [${selectedCrafts.join(', ')}] — स्क्रीन ४ पर आगे बढ़ रहे हैं (Navigating to Screen 4: Mobile Login & OTP)`);
+  }
+
+  function playAudioGuide() {
+    const helper = document.getElementById('audio-helper');
+    if (helper) {
+      helper.classList.add('scale-95');
+      setTimeout(() => helper.classList.remove('scale-95'), 200);
+    }
+    alert('ऑडियो निर्देश: कृपया उन सभी शिल्पों को चुनें जो आप बनाते हैं (Tap craft cards to select crafts)');
+  }
+
+  (function() {
+    const cards = document.querySelectorAll('.craft-card');
+    const countText = document.getElementById('craft-count-text');
+
+    function updateSelectionState() {
+      let activeCount = 0;
+      cards.forEach(card => {
+        const isSelected = card.classList.contains('ring-2');
+        const badge = card.querySelector('.check-badge');
+        const iconWrap = card.querySelector('.craft-icon-wrap');
+        const titleText = card.querySelector('.craft-title');
+        
+        if (isSelected) {
+          activeCount++;
+          if (badge) {
+            badge.classList.remove('hidden');
+            badge.classList.add('flex');
+          }
+          card.classList.remove('bg-surface-container-low', 'shadow-sm');
+          card.classList.add('bg-surface-container-lowest', 'shadow-md');
+          if (iconWrap) {
+            iconWrap.classList.remove('bg-surface-container-highest', 'text-on-surface-variant');
+            iconWrap.classList.add('bg-primary-fixed', 'text-primary');
+          }
+          if (titleText) {
+            titleText.classList.add('text-primary', 'font-semibold');
+            titleText.classList.remove('text-on-surface');
+          }
+        } else {
+          if (badge) {
+            badge.classList.add('hidden');
+            badge.classList.remove('flex');
+          }
+          card.classList.remove('bg-surface-container-lowest', 'shadow-md');
+          card.classList.add('bg-surface-container-low', 'shadow-sm');
+          if (iconWrap) {
+            iconWrap.classList.remove('bg-primary-fixed', 'text-primary');
+            iconWrap.classList.add('bg-surface-container-highest', 'text-on-surface-variant');
+          }
+          if (titleText) {
+            titleText.classList.remove('text-primary', 'font-semibold');
+            titleText.classList.add('text-on-surface');
+          }
+        }
+      });
+
+      const hindiNums = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+      const hindiCount = hindiNums[activeCount] !== undefined ? hindiNums[activeCount] : activeCount;
+      if (countText) {
+        countText.textContent = `${hindiCount} शिल्प चुने गए • ${activeCount} Craft${activeCount === 1 ? '' : 's'} Selected`;
+      }
+    }
+
+    window.updateSelectionState = updateSelectionState;
+
+    cards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        card.classList.toggle('ring-2');
+        card.classList.toggle('ring-primary');
+        updateSelectionState();
+      });
+    });
+
+    // Run once on init to make sure state matches initial marks
+    updateSelectionState();
+  })();
+</script></main>
+</body></html>

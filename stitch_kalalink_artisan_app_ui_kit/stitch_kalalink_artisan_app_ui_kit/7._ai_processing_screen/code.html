@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "tertiary": "#805200", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#feb956", "tertiary-container": "#a06901", "on-secondary-container": "#445a7f", "outline-variant": "#dec0b7", "on-surface": "#1c1c19", "inverse-primary": "#ffb59c", "surface-container": "#f0ede9", "surface-container-low": "#f6f3ee", "on-tertiary": "#ffffff", "on-background": "#1c1c19", "on-secondary-fixed-variant": "#30476a", "inverse-surface": "#31302d", "on-error": "#ffffff", "inverse-on-surface": "#f3f0eb", "outline": "#8a726a", "secondary-container": "#bbd3fd", "primary": "#9f3c16", "surface-container-highest": "#e5e2dd", "surface-container-high": "#ebe8e3", "background": "#fcf9f4", "error-container": "#ffdad6", "on-tertiary-container": "#fffbff", "on-primary-container": "#fffbff", "error": "#ba1a1a", "secondary-fixed": "#d5e3ff", "surface-tint": "#a23e18", "primary-fixed-dim": "#ffb59c", "primary-fixed": "#ffdbcf", "on-primary-fixed": "#390c00", "tertiary-fixed": "#ffddb4", "on-secondary-fixed": "#001b3c", "secondary-fixed-dim": "#b0c7f1", "on-tertiary-fixed-variant": "#633f00", "on-surface-variant": "#57423b", "on-primary": "#ffffff", "surface-bright": "#fcf9f4", "surface-variant": "#e5e2dd", "surface-container-lowest": "#ffffff", "primary-container": "#bf542c", "surface": "#fcf9f4", "on-tertiary-fixed": "#291800", "on-primary-fixed-variant": "#822801", "secondary": "#485f84", "surface-dim": "#dcdad5" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-tablet": "2rem", "space-xl": "2.5rem", "gutter-tablet": "1.5rem", "gutter-desktop": "2rem", "margin-desktop": "4rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1rem", "margin": "1rem", "space-sm": "0.5rem" }, fontFamily: { "headline-lg-mobile": ["Noto Sans"], "body-md": ["Noto Sans"], "headline-xl": ["Noto Sans"], "label-lg": ["Noto Sans"], "body-lg": ["Noto Sans"], "label-md": ["Noto Sans"], "body-sm": ["Noto Sans"], "headline-md": ["Noto Sans"], "headline-xl-mobile": ["Noto Sans"], "label-sm": ["Noto Sans"], "headline-lg": ["Noto Sans"] }, fontSize: { "headline-lg-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "fontWeight": "700" }], "label-lg": ["16px", { "lineHeight": "24px", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }], "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "500" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col pt-safe pb-safe"><main class="flex flex-col relative w-full bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-xl space-y-space-md">
+<!-- Audio Guidance Voice Alert Banner -->
+<div class="w-full bg-tertiary-container text-on-tertiary-container rounded-xl p-space-md shadow-md flex items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-on-tertiary-container/10 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+</div>
+<div class="min-w-0 flex flex-col">
+<span class="font-label-sm text-label-sm opacity-90 uppercase tracking-wider">Aawaaz Sahayata • Audio Guide</span>
+<p class="font-body-sm text-body-sm leading-snug font-bold truncate">AI aapki craft photo ko bazaar ke liye taiyar kar raha hai</p>
+<p class="font-label-sm text-label-sm opacity-90 truncate">AI is preparing your craft photo for market</p>
+</div>
+</div>
+<button aria-label="Listen to audio guidance" class="shrink-0 w-12 h-12 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-sm active:scale-95 transition-transform" id="voiceBtn">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+</button>
+</div>
+<!-- Header Quick Jump: Compare Before & After Button -->
+<a class="w-full py-2.5 px-4 rounded-xl bg-surface-container-lowest border border-primary/25 shadow-sm flex items-center justify-between gap-3 text-primary hover:bg-primary-fixed/20 active:scale-[0.98] transition-all group" href="#comparison">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">compare</span>
+</div>
+<div class="flex flex-col min-w-0 text-left">
+<span class="font-label-md text-label-md text-primary font-bold leading-tight truncate">तुलना देखें / Compare Before &amp; After</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant leading-none truncate">Live preview polished vs original craft</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0 text-xs font-bold font-label-sm bg-primary-fixed/60 text-on-primary-fixed px-2 py-1 rounded-full">
+<span>Live</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</a>
+<!-- Hero Visual: Product Processing Canvas with Scanning Beam & Radial Progress -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col items-center relative overflow-hidden cursor-pointer" onclick="window.location.href='#comparison'">
+<!-- Top Meta Status -->
+<div class="w-full flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Terra Loom AI Studio v2.4</span>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm font-bold">Smart Polish</span>
+</div>
+</div>
+<!-- Product Thumbnail with Dynamic Laser Scanner -->
+<div class="relative w-48 h-48 rounded-xl overflow-hidden bg-surface-container-low shadow-inner flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Handcrafted terracotta earthenware vase with intricate traditional Madhubani line art carvings, placed on an unpolished clay workshop potter table in warm natural sunlight with rich earthy brown and burnt orange textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA49Do7LzOAxniCILeEauMQMxyLwTZzICbP3WNTyF5G6Nfb2YVVxki68A3ZKybezA99A04xPaksnaIa8RLGadkGXTnnMYS_59-mNTOwFLsbIgwXJ3mZw-HYekFzl50NnBqwleoo0tkHwzCQonWt-wYcfUejpNM1urk7Zvs6NVbXWIlVF0PALZ-h2JTpWttwf3avtpFgeww72ZbHijl2dvFw40U9Jtk0QllXeO7PbaZ4vAp7nFn7BV_t"/>
+<!-- Cyan/Terracotta Glow Scanning Grid -->
+<div class="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-primary/10 pointer-events-none"></div>
+<!-- Animated Scanning Line -->
+<div class="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-tertiary-fixed-dim to-transparent shadow-lg shadow-tertiary animate-pulse" id="scannerBeam" style="top: 37%;"></div>
+<!-- Tactile GI Seal Overlay Indicator -->
+<div class="absolute top-2 right-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-[10px] leading-tight text-on-surface font-bold">GI Craft</span>
+</div>
+<!-- Live Dimension Calibrator Markers -->
+<div class="absolute bottom-2 left-2 bg-inverse-surface/85 text-inverse-on-surface text-[10px] px-2 py-0.5 rounded font-mono">
+        3024 × 4032 • 4K UHD
+      </div>
+</div>
+<!-- Radial Progress Meter with Craft Motif Accent -->
+<div class="relative flex items-center justify-center mt-space-md mb-1">
+<svg class="w-36 h-36 transform -rotate-90" viewbox="0 0 120 120">
+<!-- Track Ring -->
+<circle class="text-surface-container-high" cx="60" cy="60" fill="transparent" r="50" stroke="currentColor" stroke-width="8"></circle>
+<!-- Active Terracotta Progress Bar (78%) -->
+<!-- Circumference ~ 314.15; 78% = 245.03; Dashoffset = 314.15 - 245.03 = 69.12 -->
+<circle class="text-primary transition-all duration-1000 ease-out" cx="60" cy="60" fill="transparent" r="50" stroke="currentColor" stroke-dasharray="314.15" stroke-dashoffset="69.12" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<!-- Center Progress Metric -->
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-primary font-extrabold tracking-tight">78%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Taiyar / Done</span>
+</div>
+<!-- Rotating Sun/Clay Ornament Ring -->
+<div class="absolute -inset-1 border-2 border-dashed border-tertiary-fixed-dim/40 rounded-full animate-spin" style="animation-duration: 20s;"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center mt-1">
+      Estimated time remaining: <strong class="text-on-surface">~4 seconds</strong>
+</p>
+</div>
+<!-- Live Processing Steps Checklist Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between pb-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Karyasuchi / Progress</span>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-bold">2 of 4 Ready</span>
+</div>
+<!-- Step 1: Background Removed (Completed) -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">Background hata diya gaya</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Distraction-free clear studio cutout</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold px-2 py-0.5 rounded bg-primary-fixed shrink-0">Done</span>
+</div>
+<!-- Step 2: Lighting Enhanced (Active / In-Progress) -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container shadow-sm">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm relative">
+<span class="material-symbols-outlined text-lg animate-spin" style="animation-duration: 3s;">sync</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Lighting sudhaari ja rahi hai</p>
+<span class="w-2 h-2 rounded-full bg-primary animate-ping shrink-0"></span>
+</div>
+<p class="font-label-sm text-label-sm text-primary font-semibold truncate">Lighting Enhanced to Studio Quality</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-tertiary-container px-2 py-0.5 rounded font-bold shrink-0">Terra Loom AI Studio v2.4</span>
+</div>
+<!-- Step 3: Color & Texture Calibrated (Queued) -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest opacity-75">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">palette</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">Format ho raha hai</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Color &amp; Texture Calibrated (Vibrant terracotta)</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded shrink-0">Wait</span>
+</div>
+<!-- Step 4: 4K Export (Queued) -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest opacity-75">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">download_for_offline</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">E-Commerce Ready 4K Export</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">4K एक्सपोर्ट तैयार (GeM &amp; ONDC catalog)</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded shrink-0">Next</span>
+</div>
+</div>
+<!-- Artisan Sales Encouragement Tip Card (Bento Style Delight) -->
+<div class="w-full bg-secondary-fixed text-on-secondary-fixed rounded-xl p-space-md shadow-md flex items-start gap-space-sm relative overflow-hidden">
+<div class="w-10 h-10 rounded-full bg-on-secondary-fixed/10 flex items-center justify-center shrink-0 text-secondary font-bold">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<div class="flex flex-col min-w-0 z-10">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Karigar Vikas Salah / Artisan Insight</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed font-bold leading-snug">
+        Did you know? Studio-grade photos increase artisan sales by up to <span class="text-primary font-extrabold text-base">3.5x</span> on GeM and ONDC!
+      </p>
+<p class="font-label-sm text-label-sm text-on-secondary-fixed-variant mt-1">
+        Bina mahange studio ke, aapki kala ko milta hai vishwas aur sahi mulya.
+      </p>
+</div>
+<!-- Decorative background watermark stamp -->
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl text-secondary-fixed-dim/30 select-none pointer-events-none" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<!-- Secondary Pause / Cancel Action Button -->
+<div class="w-full pt-1 flex flex-col items-center"><a class="w-full h-14 mb-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-md active:scale-95 transition-transform" href="#comparison"><span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">compare</span><span class="">Tulna Dekhein / View Before &amp; After</span></a>
+<button class="w-full h-14 rounded-lg bg-surface-container-high text-on-surface-variant font-label-lg text-label-lg flex items-center justify-center gap-2 active:bg-surface-container-highest transition-colors shadow-sm" id="pauseBtn">
+<span class="material-symbols-outlined text-xl">pause_circle</span>
+<span class="">Rokein / Pause Process</span>
+</button>
+<p class="font-label-sm text-label-sm text-on-surface-variant/80 mt-2 text-center">
+      Aap is process ko rokk kar baad mein resume kar sakte hain.
+    </p>
+</div>
+</div>
+<!-- Client-side Interactive Micro-Behaviors -->
+<script>
+  // Dynamic scanning beam oscillation micro-interaction
+  const beam = document.getElementById('scannerBeam');
+  let direction = 1;
+  let pos = 35;
+  setInterval(() => {
+    pos += direction * 2;
+    if (pos > 85) direction = -1;
+    if (pos < 15) direction = 1;
+    if (beam) {
+      beam.style.top = pos + '%';
+    }
+  }, 40);
+
+  // Audio trigger interaction feedback
+  const voiceBtn = document.getElementById('voiceBtn');
+  if (voiceBtn) {
+    voiceBtn.addEventListener('click', () => {
+      voiceBtn.classList.add('scale-110');
+      setTimeout(() => voiceBtn.classList.remove('scale-110'), 200);
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance("AI aapki craft photo ko bazaar ke liye taiyar kar raha hai. 78 percent poora ho gaya hai.");
+        msg.lang = 'hi-IN';
+        msg.rate = 0.95;
+        window.speechSynthesis.speak(msg);
+      }
+    });
+  }
+
+  // Pause action state
+  const pauseBtn = document.getElementById('pauseBtn');
+  let isPaused = false;
+  if (pauseBtn) {
+    pauseBtn.addEventListener('click', () => {
+      isPaused = !isPaused;
+      if (isPaused) {
+        pauseBtn.innerHTML = '<span class="material-symbols-outlined text-xl">play_arrow</span><span>Jari Rakhein / Resume</span>';
+        pauseBtn.classList.add('bg-primary', 'text-on-primary');
+        pauseBtn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+      } else {
+        pauseBtn.innerHTML = '<span class="material-symbols-outlined text-xl">pause_circle</span><span>Rokein / Pause Process</span>';
+        pauseBtn.classList.remove('bg-primary', 'text-on-primary');
+        pauseBtn.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      }
+    });
+  }
+</script></main>
+</body></html>

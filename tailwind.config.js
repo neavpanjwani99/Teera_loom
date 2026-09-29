@@ -1,0 +1,83 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: 'class',
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'primary': '#9f3c16',
+        'primary-container': '#bf542c',
+        'primary-fixed': '#ffdbcf',
+        'primary-fixed-dim': '#ffb59c',
+        'on-primary': '#ffffff',
+        'on-primary-container': '#fffbff',
+        'on-primary-fixed': '#390c00',
+        'on-primary-fixed-variant': '#822801',
+        'inverse-primary': '#ffb59c',
+        
+        'secondary': '#485f84',
+        'secondary-container': '#bbd3fd',
+        'secondary-fixed': '#d5e3ff',
+        'secondary-fixed-dim': '#b0c7f1',
+        'on-secondary': '#ffffff',
+        'on-secondary-container': '#445a7f',
+        'on-secondary-fixed': '#001b3c',
+        'on-secondary-fixed-variant': '#30476a',
+        
+        'tertiary': '#805200',
+        'tertiary-container': '#a06901',
+        'tertiary-fixed': '#ffddb4',
+        'tertiary-fixed-dim': '#feb956',
+        'on-tertiary': '#ffffff',
+        'on-tertiary-container': '#fffbff',
+        'on-tertiary-fixed': '#291800',
+        'on-tertiary-fixed-variant': '#633f00',
+        
+        'surface': '#fcf9f4',
+        'surface-dim': '#dcdad5',
+        'surface-bright': '#fcf9f4',
+        'surface-container-lowest': '#ffffff',
+        'surface-container-low': '#f6f3ee',
+        'surface-container': '#f0ede9',
+        'surface-container-high': '#ebe8e3',
+        'surface-container-highest': '#e5e2dd',
+        'surface-variant': '#e5e2dd',
+        'on-surface': '#1c1c19',
+        'on-surface-variant': '#57423b',
+        'inverse-surface': '#31302d',
+        'inverse-on-surface': '#f3f0eb',
+        'surface-tint': '#a23e18',
+        'background': '#fcf9f4',
+        'on-background': '#1c1c19',
+        
+        'outline': '#8a726a',
+        'outline-variant': '#dec0b7',
+        
+        'error': '#ba1a1a',
+        'error-container': '#ffdad6',
+        'on-error': '#ffffff',
+        'on-error-container': '#93000a',
+
+        'forest-green': '#2A9D8F',
+      },
+      borderRadius: {
+        'DEFAULT': '0.25rem',
+        'sm': '0.25rem',
+        'md': '0.5rem',
+        'lg': '0.75rem',
+        'xl': '1rem',
+        '2xl': '1.25rem',
+        '3xl': '1.5rem',
+        'full': '9999px',
+      },
+      fontFamily: {
+        sans: ['Noto Sans', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+};
